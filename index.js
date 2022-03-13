@@ -15,8 +15,8 @@ let inputField = document.getElementById("inputField")
 const createADish = () => {
     addDishButton.addEventListener("click", () => {
         if(inputField.value.length == 0){
-            alert("Please Enter the Name of a dish ")
-        } else {
+            alert("Please Enter The Name of a Dish ")
+        }else {
             let dish = document.createElement('p')
             dish.classList.add("dish-styling")
             dish.innerHTML += `

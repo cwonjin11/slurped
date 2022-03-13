@@ -5,6 +5,7 @@ html, body {
     width: 50%;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
 }
 
 h1{
@@ -17,11 +18,18 @@ h1{
 #inputField {
     width: 300px;
     height: 30px;
-    /* outline: none; */
-    /* border: 1px solide black; */
+    color: #fa3939;
+    cursor: wait;
+    border: 1px solid red;
+    border-radius: 5px;
     font-size: 15px;
-    /* vertical-align: middle; */
+    text-align: center;
 }
+::placeholder {
+    color: blue;
+    opacity: 0.6;
+    text-align: center;
+  }
 
 #addDishes button{
     background-color: #384bf1;
@@ -32,12 +40,13 @@ h1{
     border: none;
     cursor: pointer;
     outline: none;
+    font-size: 18px;
 }
 
 .dish-styling{
     /* height: 30px; */
     margin: auto;
-    width: 96%;
+    width: 95%;
     /* position: relative; */
     /* float: right; */
     cursor: pointer;
@@ -45,12 +54,13 @@ h1{
 }
 
 .dish-styling li{
-    margin-top: 5px
+    margin-top: 5px;
+    height: 30px;
 }
 
 
 .dish-styling button{
-    background-color: red;
+    background-color: #fc5f5f;
     float: right;
     color: #ffffff;
     height: 100%;
