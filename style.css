@@ -7,24 +7,56 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+    text-align: center;
+}
 .container {
     width: 360px;
 }
 
 #inputField {
     width: 300px;
-    height: 46px;
+    height: 30px;
+    /* outline: none; */
+    /* border: 1px solide black; */
+    font-size: 15px;
+    /* vertical-align: middle; */
+}
+
+#addDishes button{
+    background-color: #384bf1;
+    color: #ffffff;
+    height: 35px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
     outline: none;
-    border: 1px solide black;
-    font-size: 25px;
-    vertical-align: middle;
 }
 
 .dish-styling{
+    /* height: 30px; */
     margin: auto;
-    position: relative;
+    width: 96%;
+    /* position: relative; */
     /* float: right; */
     cursor: pointer;
     font-size: 20px;
-    color: blue
+}
+
+.dish-styling li{
+    margin-top: 5px
+}
+
+
+.dish-styling button{
+    background-color: red;
+    float: right;
+    color: #ffffff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }

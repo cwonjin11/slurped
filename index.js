@@ -8,36 +8,30 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
-
-const changeBackground = () => { document.addEventListener("click", () => {
-    document.body.style.backgroundColor  = "red"
-    })
-}
-
 let addDishButton = document.getElementById("add")
-let dishContainer = document.getElementById("allDishes")
+let allDishes = document.getElementById("allDishes")
 let inputField = document.getElementById("inputField")
 
 const createADish = () => {
-    addDishButton.onclick = () => {
-        
+    addDishButton.addEventListener("click", () => {
         if(inputField.value.length == 0){
             alert("Please Enter the Name of a dish ")
         } else {
             let dish = document.createElement('p')
             dish.classList.add("dish-styling")
             dish.innerHTML += `
-                <li>${inputField.value}
-                    <button class="delete">
-                        <i class="far fa-trash-alt"></i>
-                    </button>
-                </li>
+                <div class="dish-container">
+                    <li>${inputField.value}
+                        <button class="delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </li>
+                </div>
                 `
-            dishContainer.appendChild(dish)
+            allDishes.appendChild(dish)
             inputField.value = ""
 
-            
+
             let deleteDishBtn = document.getElementsByClassName("delete");
             for(let i=0; i<deleteDishBtn.length; i++){
                 deleteDishBtn[i].addEventListener("click", deleteAddedDish)
@@ -47,7 +41,7 @@ const createADish = () => {
             }
             
         }
-    }
+    })
 
 
 }
@@ -61,6 +55,15 @@ const enterToAdd = () => {
 }
 
 
+
+
+
+
+// FOR A TEST PURPOSE
+// const changeBackground = () => { document.addEventListener("click", () => {
+//     document.body.style.backgroundColor  = "red"
+//     })
+// }
 
 
 
