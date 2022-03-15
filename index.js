@@ -1,22 +1,19 @@
 document.addEventListener("click", (event) => {console.log("ʘ CLICKED ʘ👀", event.target)})
 
 document.addEventListener("DOMContentLoaded", () => {
-
     createADish()
     enterToAdd()
-    // changeBackground()
 })
 
-
-let addDishButton = document.getElementById("add")
-let allDishes = document.getElementById("allDishes")
-let inputField = document.getElementById("inputField")
+const addDishButton = document.getElementById("add")
+const allDishes = document.getElementById("allDishes")
+const inputField = document.getElementById("inputField")
 
 const createADish = () => {
     addDishButton.addEventListener("click", () => {
         if(inputField.value.length == 0){
             alert("Please Enter The Name of a Dish ")
-        }else {
+        } else {
             let dish = document.createElement('p')
             dish.classList.add("dish-styling")
             dish.innerHTML += `
@@ -31,13 +28,12 @@ const createADish = () => {
             allDishes.appendChild(dish)
             inputField.value = ""
 
-
             let deleteDishBtn = document.getElementsByClassName("delete");
             for(let i=0; i<deleteDishBtn.length; i++){
                 deleteDishBtn[i].addEventListener("click", deleteAddedDish)
             }
             function deleteAddedDish() {
-                this.parentNode.remove(); // remove parent, since button is child
+                this.parentNode.remove();
             }
             
         }
@@ -53,6 +49,129 @@ const enterToAdd = () => {
         addDishButton.click();
     })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // textColorChanger()
+    // backgroundColorChanger()
+    // likeBtnEvent()
+
+
+
+
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue"
+// };
+
+// let testDiv = document.getElementById("test")
+// testDiv.innerHTML = `
+// <button id="tBtn"> test </button>
+// `
+// let gettBtn = document.getElementById("tBtn")
+//     gettBtn.addEventListener("click", () => {
+
+//         let newText = document.createElement("p")
+//         newText.innerText = `
+//         FirstName = ${person.firstName}
+//         lastName = ${person.lastName}
+//         age = ${person.age}
+//         eyeColor = ${person.eyeColor}
+//         `
+//         testDiv.appendChild(newText)
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const likeBtnEvent = () => {
+//     let likeBtn = document.getElementById("testBtn")
+//     // console.log(likeBtn)
+//     likeBtn.addEventListener("click", () => {
+//        let parsedNum = Number(likeBtn.innerText.replace(/[^0-9]/g,''))
+//        let newLikes = parsedNum + 1
+//        likeBtn.innerText = `❤️: ${newLikes}`
+//     })
+// }
+
+
+
+// const textColor = ["MediumSpringGreen", "lightgreen", "yellow", "yellowgreen", "Aquamarine", "LightCoral", "SkyBlue"]
+// const h1Text = document.querySelector("h1")
+// const background = document.querySelector("body")
+
+// const textColorChanger = () => {
+//         let index = 0
+//         const maxIndex = textColor.length
+    
+//         h1Text.addEventListener("mouseover", () => { 
+//             h1Text.style.color = textColor[index++]
+//             if(index == maxIndex){
+//                 index = 0;
+//             }
+//         })
+// }
+
+// const backgroundColorChanger = () => {
+//     let index = 0
+//     const maxIndex = textColor.length
+
+//     background.addEventListener("mouseover", () => { 
+//         background.style.backgroundColor = textColor[index++]
+//         if(index == maxIndex){
+//             index = 0;
+//         }
+//     })
+// }
+
+
+
+
+// const h1TextColorChange = () => {
+//     const head = document.querySelector('h1');
+//     head.addEventListener('mouseover', () => {
+//         head.style.color = "#" + Math.floor(Math.random()*16777215).toString(16);
+//     })
+// }
+
+
+
+
 
 
 
